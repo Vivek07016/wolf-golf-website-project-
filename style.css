@@ -1,0 +1,445 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'montserrat';
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+
+#cursor {
+    height: 20px;
+    width: 20px;
+    background-color: #92C11E;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+}
+
+#cursor-blur {
+    height: 400px;
+    width: 400px;
+    background-color: #93c11e44;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(50px);
+    z-index: 9;
+}
+#nav {
+    width: 100vw;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 150px;
+    position: fixed;
+    color: #ffffffe2;
+    gap: 40px;
+    z-index: 99;
+
+}
+
+
+video {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    object-fit: cover;
+    z-index: -1;
+
+}
+
+
+#main {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.314);
+}
+
+#page1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    position: relative; 
+    color: #fff;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 50px;
+    font-size: 100px;
+    position: relative;
+}
+
+h1::before {
+    content: "EAT. DRINK. PLAY ";
+    color: #96c11e;
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    -webkit-text-stroke: 2px #95C11E;
+    z-index: -1;
+}
+
+h2 {
+    font-size: 30px;
+    line-height: 60px;
+}
+
+#page1 p {
+    font-size: 16px;
+    line-height: 1.3;
+    width: 39%;
+    margin-top: 5px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+#page2 {
+    height: 100vh;
+    width: 100%;
+    z-index: 99;
+    /* background-color: pink; */
+    /* font-size: 100px; */
+    /* position: relative; */
+}
+
+#scroller {
+    /* display: inline-block; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+
+}
+
+ #scroller::-webkit-scrollbar {
+    display: none;
+} 
+
+#scroller-1 {
+    display: inline-block;
+    font-size: 90px;
+    font-weight: 950;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 20s;
+    animation-delay: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+#scroller h4 {
+    display: inline-block;
+    font-size: 100px;
+    font-weight: 950;
+    font-family: gilroy;
+    color: transparent;
+    -webkit-text-stroke: 2px #fff;
+    animation: scroll 5s;
+    transition: all linear 0.5s;
+}
+
+#scroller h4:hover {
+    color: #95C11E;
+    -webkit-text-stroke: 2px #95C11E;
+
+}
+
+
+@keyframes scroll {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+#box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+}
+
+
+#box img {
+    border-radius: 30px;
+    margin-top: 10px;
+    object-fit: cover;
+}
+
+
+#box1 h1 {
+    font-size: 50px;
+    margin: auto;
+    font-weight: 980;
+    color: #fff;
+}
+
+#box1 h3 {
+    font-size: 20px;
+    width: 100%;
+    color: #fff;
+    font-family: sans-serif;
+    margin-top: 30px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+#box1 {
+    width: 600px;
+    height: 220px;
+    margin-left: 60px;
+    margin-right: 60px;
+    text-align: center;
+}
+
+
+#cards {
+    background-color: black;
+    height: 58vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+#in-box {
+    margin-top: -20px;
+}
+
+#cards img {
+    margin-left: -90px;
+    margin-top: 70px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+
+#green-box {
+    width: 100%;
+    height: 35vh;
+    background: linear-gradient(to left bottom, #119f3a, #ace022);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* position: relative; */
+    overflow: hidden;
+}
+
+#g2 {
+    text-align: center;
+    margin-right: 90px;
+}
+
+#g3 {
+    /* position: absolute; */
+    margin-right: -90px;
+
+}
+
+#black-box {
+    width: 100%;
+    height: 75vh;
+    background-color: black;
+    color: #fff;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 20% 20%; */
+    position: relative;
+}
+
+
+#black-box h2 {
+    width: 60%;
+    text-align: center;
+    line-height: 1.5;
+}
+
+#black-box img {
+    position: absolute;
+    height: 60px;
+
+}
+
+#col1 {
+    top: 27%;
+    left: 19%;
+}
+
+#col2 {
+    bottom: 45;
+    right: 15%;
+}
+
+
+
+
+#black-box-2 {
+    overflow: hidden;
+    background-color: #000;
+    height: 45vh;
+    width: 100%;
+    position: relative;
+}
+
+#black-box-2-1 {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 115px 40px;
+}
+
+.c {
+    width: 330px;
+    height: 130px;
+    background-color: #96c11e;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 600;
+    border-radius: 20px;
+    z-index: 99;
+}
+
+
+#b1:hover {
+    background-image: url("Assests/page-toptracer\ 1.avif ");
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    background-size: 330px 150px;
+    object-fit: cover;
+    transition: all ease 2s;
+    scale: 1;
+    padding-top: 90px;
+}
+
+
+#b2:hover {
+    background-image: url("Assests/page-lessons-2.avif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    transition: all ease 2s;
+    scale: 1;
+    overflow: hidden;
+    color: #fff;
+    padding-top: 90px;
+
+}
+
+
+#b3:hover {
+    background-image: url("Assests/page-ag-3.avif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    transition: all ease 2s;
+    scale: 1;
+    overflow: hidden;
+    color: #fff;
+    padding-top: 90px;
+}
+
+
+#black-box-2 #b4 {
+    position: absolute;
+    margin-top: 50px;
+    font-size: 83px;
+    font-weight: 900;
+    font-family: s;
+    -webkit-text-stroke: 4px #fff;
+    z-index: 1;
+    color: transparent;
+    transition: all ease 0.2s;
+}
+
+
+#footers {
+    width: 100%;
+    height: 40vh;
+    background: linear-gradient(to left bottom, #119f3a, #95C11E);
+    overflow: hidden;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+
+
+.foot {
+    width: 22%;
+    height: 90%;
+}
+
+#foot1 {
+    margin-left: -40px;
+    height: 100%;
+    position: fixed;
+    position: relative;
+}
+
+#foot1 img {
+    position: absolute;
+    z-index: 99;
+}
+
+#im1 {
+    /* position: relative; */
+    padding-top: 50px;
+    padding-left: 130px;
+}
+
+#foot2 {
+    position: relative;
+    padding-top: 50px;
+}
+
+#foot3 {
+    position: relative;
+    padding-top: 50px;
+}
+
+
+.fot1>h3 {
+    overflow: hidden;
+    margin-top: 5px;
+    padding: 5px 0;
+    line-height: 1;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 550;
+}
+
+
+#foot4 {
+    position: relative;
+    padding-top: 40px;
+}
+
+#fot11 {
+    line-height: 1.5;
+
+}
